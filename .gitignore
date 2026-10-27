@@ -1,0 +1,47 @@
+# ==============================================================================
+# .gitignore - SismoWatch Medallion Architecture
+# ==============================================================================
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# Variables de entorno y secretos
+.env
+*.env.local
+
+# Python cache y compilados
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs de ejecucion
+logs/*
+!logs/.gitkeep
+airflow/logs/
+
+# Node y dependencias de frontend
+web/node_modules/
+web/dist/
+web/.vite/
+
+# Archivos de sistema y temporales
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# Almacenamiento local del Lakehouse (Parquet/JSON)
+data/lakehouse/bronze/*
+!data/lakehouse/bronze/.gitkeep
+data/lakehouse/silver/*
+!data/lakehouse/silver/.gitkeep
+data/lakehouse/gold/*
+!data/lakehouse/gold/.gitkeep
+
